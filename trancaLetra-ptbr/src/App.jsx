@@ -26,7 +26,7 @@ const App = () => {
   }, [alfabeto]);
 
   const startTimer = (letter) => {
-    setTimeLeft(10);
+    setTimeLeft(25);
     setIsRunning(true);
     setCurrentLetter(letter);
   };
