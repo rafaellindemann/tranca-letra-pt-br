@@ -53,7 +53,7 @@ function App(){
     const gainNode = context.createGain();
 
     oscillator.type = 'square';
-    oscillator.frequency.setValueAtTime(1000, context.currentTime); // 1000 Hz
+    oscillator.frequency.setValueAtTime(100, context.currentTime); // 1000 Hz
     gainNode.gain.setValueAtTime(1, context.currentTime);
 
     oscillator.connect(gainNode);
@@ -62,7 +62,7 @@ function App(){
     oscillator.start();
     setTimeout(() => {
       oscillator.stop();
-    }, 100); // 100 ms
+    }, 150); // 100 ms
   };
 
   return (
