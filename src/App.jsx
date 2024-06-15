@@ -74,6 +74,8 @@ function App() {
 
   return (
     <div style={{ textAlign: 'center' }}>
+    {/* <h1><img src="./tranca-letras2.png" alt="" /></h1> */}
+    <h1>Tranca Letras</h1>
       {currentLetter && (
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
           <h2 className='letra'>⏳ {timeLeft}s ⏳</h2>
