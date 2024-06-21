@@ -1,5 +1,5 @@
 
-```markdown
+
 # Tranca Letra pt-br
 
 Este é um projeto didático que simula o funcionamento do jogo "Trava Letra". O jogo consiste em dizer uma palavra que inicie com a letra selecionada antes do tempo acabar.
