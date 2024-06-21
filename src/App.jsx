@@ -6,6 +6,116 @@ function App() {
   const [alfabeto, setAlfabeto] = useState([
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
   ]);
+
+  const faceis = [
+    "esportes olímpicos",
+    "objetos",
+    "comidas",
+    "Animais",
+    // "filmes",
+    // "personagens",
+    // "cantor/cantora/banda",
+    // "ator/atriz",
+    // "frutas",
+    // "objetos escolares",
+    // "comidas de café da manhã",
+    // "coisas azuis",
+    // "coisas redondas",
+    // "adjetivos",
+    // "coisas úmidas/molhadas",
+    // "filmes da disney",
+    // "monstros e criaturas míticas",
+    // "livros",
+    // "nomes de bichos de estimação",
+    // "instrumentos musicais",
+    // "neste recinto",
+    // "profissões e ocupações",
+    // "armas",
+    // "hobbies",
+    // "flores e plantas",
+    // "vestuário",
+    // "carros",
+    // "partes do carro",
+    // "partes do corpo humano",
+    // "nomes femininos",
+    // "nomes masculinos",
+    // "figuras históricas",
+    // "políticos",
+    // "países, cidades e estados",
+    // "jogos",
+    // "objetos de consultório médico",
+    // "coisas vermelhas",
+    // "comidas de padaria",
+    // "coisas de jardim",
+    // "objetos de banheiro",
+    // "sobremesas",
+    // "heróis/heroínas",
+    // "coisas macias",
+    // "eletrônicos",
+    // "coisas circenses",
+    // "brinquedos",
+    // "vegetais",
+    // "coisas para usar na cabeça",
+    // "objetos de quarto",
+    // "material de escritório",
+    // "coisas grudentas",
+    // "cores",
+    // "sabores de pizza",
+    // "desenhos animados",
+    // "tipos de queijo",
+    // "seriados",
+    // "insetos",
+    // "motivos para uma comemoração/festa",
+    // "coisas do museu",
+    // "termos de computação",
+    // "carnes",
+    // "ervas e temperos",
+    // "categorias da ciência",
+    // "hábitos ruins",
+    // "na floresta",
+    // "sabores de sorvete"
+];
+
+  const dificeis = [
+    "celebridades",
+    "coisas de um casamento",
+    "no oceano",
+    "objetos com botões",
+    "bebidas",
+    "equipamentos esportivos",
+    "reptéis e anfíbios",
+    "produtos de limpeza",
+    "metais preciosos e gemas",
+    "comida porcaria (junkie food)",
+    "coisas assustadoras",
+    "cosméticos",
+    "palavras com cinco letras"
+  ]
+
+  function sortearFacil(){
+    if(faceis.length > 0){
+      let n = Math.floor(Math.random()*faceis.length)
+      alert("Categoria selecionada: " + faceis[n])
+      faceis.splice(faceis.indexOf(faceis[n]),1)
+      console.log(n);
+      console.log(faceis.length);
+    }else{
+      alert("ACABARAM AS FÁCEIS")
+    }
+  }
+
+  function sortearDificil(){
+    if(dificeis.length > 0){
+      let n = Math.floor(Math.random()*dificeis.length)
+      alert("Categoria selecionada: " + dificeis[n])
+      dificeis.splice(dificeis.indexOf(dificeis[n]),1)
+      console.log(n);
+      console.log(dificeis.length);
+    }else{
+      alert("ACABARAM AS DIFÍCEIS")
+    }
+  }
+
   const [timeLeft, setTimeLeft] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [currentLetter, setCurrentLetter] = useState(null);
@@ -73,15 +183,27 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: 'center' }}>
-    {/* <h1><img src="./tranca-letras2.png" alt="" /></h1> */}
-    <h1>Tranca Letras</h1>
-      {currentLetter && (
-        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
-          <h2 className='letra'>⏳ {timeLeft}s ⏳</h2>
-          <h2 className='letra'>{currentLetter}</h2>
-        </div>
-      )}
+    <div style={{ textAlign: 'center' }} >
+      <div className="header">
+        <h1>Tranca Letras</h1>
+          <div>
+            {currentLetter && (
+                <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
+                  <h2 className='letra'>⏳ {timeLeft}s ⏳</h2>
+                  <h2 className='letra'>{currentLetter}</h2>
+                </div>
+              )}
+          </div>
+          <div className='painelBotoes'>
+            <p>Sortear Categoria</p>
+            <div className="botoes">
+              <Button onClick={sortearFacil}>Fácil</Button>
+              <Button onClick={sortearDificil}>Difícil</Button>
+            </div>
+          </div>
+
+      </div>
+
       <div>
         {alfabeto.map((letter) => (
           <Button
