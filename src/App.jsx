@@ -199,16 +199,18 @@ function App() {
   return (
     <div style={{ textAlign: 'center' }}>
       <div className="header">
-        <h1>Tranca Letras</h1>
-        <div>
-          {currentLetter && (
+        <div className='terco'>
+          {/* {currentLetter && ( */}
+          { true && (
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
-              <h2 className='letra'>⏳ {timeLeft}s ⏳</h2>
-              <h2 className='letra'>{currentLetter}</h2>
+              <h2 className='letra'>⏳{timeLeft}s⏳</h2>
+              <h2 className='letra'>{currentLetter} </h2>
             </div>
           )}
         </div>
-        <div className='painelBotoes'>
+        {/* <h1>Tranca Letras</h1> */}
+        <h1  className='terco'><img src="/tranca-letras2.png" alt="" /></h1>
+        <div className='painelBotoes terco'>
           <p>Sortear Categoria</p>
           <div className="botoes">
             <Button onClick={sortearFacil}>Fácil ({tamanhoFaceis})</Button>
@@ -233,7 +235,7 @@ function App() {
               backgroundColor: '#9d4edd',
               color: '#fff',
               '&:hover': {
-                backgroundColor: '#e64a19',
+                backgroundColor: '#3c096c',
                 color: '#000'
               }
             }}
