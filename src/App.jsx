@@ -26,7 +26,7 @@ Seja criativo nas respostas para evitar ficar sem opções e tente sempre ter um
 * Derem uma resposta que não se enquadre na categoria e/ou seja considerada errada (decidido pelos outros jogadores);
 * Pressionarem uma letra incorreta.
 Quando um jogador é eliminado, o próximo jogador ecolhe uma letra e a rodada continua até restar apenas um jogador, que ganha a carta da rodada. 
-Continue jogando até que um jogador ganhe 3 rodadas primeiro.`);
+Continue jogando até que um jogador ganhe 3 rodadas primeiro.\nAs letras podem ser pressionadas no teclado ou clicadas na tela. Boa sorte!`);
   }
 
 
