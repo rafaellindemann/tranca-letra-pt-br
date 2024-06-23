@@ -239,7 +239,18 @@ Continue jogando até que um jogador ganhe 3 rodadas primeiro.\nAs letras podem 
         ))}
       </div>
       <footer>
-        <button onClick={mostrarRegras}>❔❔Como jogar❔❔</button>
+        <div className='comoJogar'>
+          <button onClick={mostrarRegras}>❔❔Como jogar❔❔</button>
+        </div>
+        <div className="links">
+          <a href="https://github.com/rafaellindemann/tranca-letra-pt-br" target="_blank">
+            <img src="/mdi--github.svg" alt="link para o GitHub" />
+          </a>
+          <a href="https://www.acartomante.com.br/" target="_blank">
+            <img src="/game-icons--witch-flight.svg" alt="Link para a Cartomante mais Linda" />
+          </a>
+
+        </div>
       </footer>
     </div>
   );

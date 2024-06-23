@@ -189,3 +189,20 @@ button:focus-visible {
     font-size: 30px;
   }
 }
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.8em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comoJogar{
+  flex: 8;
+}
+
+.linkGitHub{
+  flex: 1;
+}
