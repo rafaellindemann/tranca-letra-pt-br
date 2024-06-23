@@ -8,6 +8,7 @@
   margin: 0;
   padding: 2rem;
   text-align: center;
+  width: 100%;
 }
 
 
@@ -28,6 +29,11 @@ h1 {
   text-shadow: 0px 0px 10px #9d4edd;
   color: #3C096C;
 }
+
+/* h1:hover{
+  text-shadow: 0px 0px 10px #3C096C;
+  color: #9d4edd;
+} */
 
 p{
   margin: 0;
@@ -59,6 +65,9 @@ button:focus-visible {
   /* color: #9d4edd; */
   color: #3c096c;
   font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* 
 .ampuletas{
@@ -100,6 +109,22 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
+.currentLetter{
+  /* width: 40px;
+  height: 40px; */
+  margin: 5px;
+  font-size: 80px;
+  background-color: #9d4edd;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
 .card {
   padding: 2em;
 }
@@ -108,22 +133,7 @@ button:focus-visible {
   color: #888;
 }
 
-/* App.css */
 
-/* Tamanho padrão dos botões */
-/* .button {
-  width: 140px;
-  height: 140px;
-  margin: 5px;
-  font-size: 80px;
-  background-color: #9d4edd;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-
-  
-} */
 
 .button {
   width: 140px;

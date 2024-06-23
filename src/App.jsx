@@ -112,21 +112,8 @@ function App() {
   return (
     <div style={{ textAlign: 'center' }}>
       <div className="header">
-        <div>
-          {true && (
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
-              {/* <h2 className='letra'>⏳{timeLeft}s⏳</h2> */}
-              <h2 className='letra'>
-                {timeLeft}s
-                <img src="/game-icons--extra-time.svg" alt="" className='ampuletas'/>
-                {/* <img src="/game-icons--solar-time.svg" alt="" className='ampuletas'/> */}
-                </h2>
-              <h2 className='letra'>{currentLetter} </h2>
-            </div>
-          )}
-        </div>
-        {/* <h1 className='terco'><img src="/tranca-letras2.png" alt="Tranca Letras" /></h1> */}
-        <h1 className='terco'>TRANCA LETRAS</h1>
+
+
         <div className='painelBotoes'>
           <p>Sugerir Categoria</p>
           <div className='botoes'>
@@ -138,7 +125,25 @@ function App() {
             {categoria && <p> #{categoria}</p>}
           </div>
         </div>
+        {/* <h1 className='terco'><img src="/tranca-letras2.png" alt="Tranca Letras" /></h1> */}
+        <h1 className='terco'>TRANCA LETRAS</h1>
+
+        <div>
+          {true && (
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
+              {/* <h2 className='letra'>⏳{timeLeft}s⏳</h2> */}
+              <h2 className='letra'>
+                {timeLeft}s
+                <img src="/game-icons--extra-time.svg" alt="" className='ampuletas'/>
+                {/* <img src="/game-icons--solar-time.svg" alt="" className='ampuletas'/> */}
+                </h2>
+              <h2 className='letra currentLetter'>{currentLetter} </h2>
+            </div>
+          )}
+        </div>
       </div>
+
+
       <div className='divLetras'>
         {alfabeto.map((letter) => (
           <button
