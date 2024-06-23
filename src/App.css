@@ -1,8 +1,58 @@
+*{
+  font-family: "Wellfleet", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0;
   padding: 2rem;
   text-align: center;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0;
+  /* text-shadow: 0px 0px 10px #3C096C;
+  color: #9d4edd; */
+  text-shadow: 0px 0px 10px #9d4edd;
+  color: #3C096C;
+}
+
+p{
+  margin: 0;
+  font-size: 22px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #9d4edd;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  /* color: #3C096C; */
+  border: 1px solid #fff;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .letra{
@@ -10,16 +60,17 @@
   color: #3c096c;
   font-size: 60px;
 }
-
-.terco{
-  width: 33.3333%;
-}
+/* 
+.ampuletas{
+  font-size: larger;
+} */
 
 .header{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .painelBotoes{
@@ -27,34 +78,26 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  color: #3c096c;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.botoes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.divLetras{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -63,4 +106,76 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* App.css */
+
+/* Tamanho padrão dos botões */
+/* .button {
+  width: 140px;
+  height: 140px;
+  margin: 5px;
+  font-size: 80px;
+  background-color: #9d4edd;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  
+} */
+
+.button {
+  width: 140px;
+  height: 140px;
+  margin: 5px;
+  font-size: 80px;
+  background-color: #9d4edd;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.button:hover {
+  background-color: #3c096c;
+  color: #000;
+}
+
+/* Media query para telas menores */
+@media (max-width: 1200px) {
+  .button {
+    width: 120px;
+    height: 120px;
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .button {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .button {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
 }
