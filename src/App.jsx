@@ -18,6 +18,18 @@ function App() {
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
   ]);
 
+  function mostrarRegras() {
+    alert(`Dê uma resposta para a categoria sorteada utilizando as letras disponíveis na tela.
+      O último jogador restante ganha a rodada.  
+Seja criativo nas respostas para evitar ficar sem opções e tente sempre ter uma resposta preparada para sua próxima vez. Pressione a letra correspondente à primeira letra da sua resposta (exemplo: se sua resposta for "Tênis", aperte a letra "T").\nAs letras já pressionadas são excluídas, aumentando a dificuldade do jogo a cada resposta. Jogadores são eliminados da rodada se:
+* Não responderem dentro dos 25 segundos do cronômetro;
+* Derem uma resposta que não se enquadre na categoria e/ou seja considerada errada (decidido pelos outros jogadores);
+* Pressionarem uma letra incorreta.
+Quando um jogador é eliminado, o próximo jogador ecolhe uma letra e a rodada continua até restar apenas um jogador, que ganha a carta da rodada. 
+Continue jogando até que um jogador ganhe 3 rodadas primeiro.`);
+  }
+
+
   function sortearFacil() {
     if (faceis.length > 0) {
       let n = Math.floor(Math.random() * faceis.length);
@@ -112,8 +124,6 @@ function App() {
   return (
     <div style={{ textAlign: 'center' }}>
       <div className="header">
-
-
         <div className='painelBotoes'>
           <p>Sugerir Categoria</p>
           <div className='botoes'>
@@ -155,6 +165,9 @@ function App() {
           </button>
         ))}
       </div>
+      <footer>
+        <button onClick={mostrarRegras}>❔❔Como jogar❔❔</button>
+      </footer>
     </div>
   );
 }
