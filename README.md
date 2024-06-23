@@ -32,7 +32,7 @@ A letra pode ser selecionada com clique no botão ou pelo teclado.
    npm run dev
    ```
 
-O projeto estará disponível em `http://localhost:3000`.
+O projeto estará disponível em `http://localhost:5173`.
 
 ## Demo online
 
